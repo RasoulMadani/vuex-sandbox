@@ -1,11 +1,11 @@
 import {createStore} from "vuex";
-
+import {INCREMENT} from "./mutation-type.js";
 const store = createStore({
     state:{
         count:1,
     },
     mutations:{
-        increment(state,number){
+        [INCREMENT](state,number){
             state.count+=number.name;
         }
     }
