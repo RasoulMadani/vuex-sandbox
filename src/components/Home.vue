@@ -4,11 +4,7 @@ export default {
 
   computed:{
     doneTodos(){
-      return this.$store.state.todos.filter(todo=>{
-        if(todo.done === true){
-          return todo;
-        }
-      })
+      return this.$store.getters.doneTodos
     },
     todos(){
       return this.$store.state.todos
