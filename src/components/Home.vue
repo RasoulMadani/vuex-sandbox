@@ -1,8 +1,18 @@
 <script >
+import {useStore} from "vuex";
+import {computed} from "vue";
+
 export default {
   computed:{
     count(){
       return this.$store.state.count;
+    }
+  },
+  setup(){
+    const store = useStore();
+    const count = computed(()=>store.state.count);
+    return {
+      count
     }
   }
 }
