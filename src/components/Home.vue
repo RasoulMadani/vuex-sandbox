@@ -1,27 +1,21 @@
 <script >
-import {mapState, useStore} from "vuex";
-import {computed} from "vue";
 
 export default {
-  computed: mapState(['count'])
-  // computed:{
-  //   count(){
-  //     return this.$store.state.count;
-  //   }
-  // },
-  // setup(){
-  //   const store = useStore();
-  //   const count = computed(()=>store.state.count);
-  //   return {
-  //     count
-  //   }
-  // }
+
+  computed:{
+    todos(){
+      return this.$store.state.todos
+    }
+  }
 }
 </script>
 
 <template>
 <h4>home component</h4>
-  <h4>{{count}}</h4>
+  <h5 v-for="todo in todos" :key="todo.id">
+    {{ todo.text}}
+
+  </h5>
 </template>
 
 <style scoped>
