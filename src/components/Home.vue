@@ -9,7 +9,7 @@ export default {
     const store = useStore();
     const count =  computed(()=>store.state.count);
     function increment(){
-      store.commit("increment",2);
+      store.commit("increment",{name:2,ali:2});
     }
     return {
       count,

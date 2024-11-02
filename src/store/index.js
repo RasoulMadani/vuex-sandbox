@@ -6,7 +6,7 @@ const store = createStore({
     },
     mutations:{
         increment(state,number){
-            state.count+=number;
+            state.count+=number.name;
         }
     }
 })
